@@ -1,5 +1,5 @@
 import { Notification } from '../../entities/notification/notification';
-import { SendNotification } from './send-notification-use-case';
+import { SendNotification } from './send-notification.use-case';
 
 const notifications: Notification[] = [];
 
