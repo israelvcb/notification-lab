@@ -21,6 +21,7 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "strictPropertyInitialization": false,
+
     "paths": {
       "@core/*": ["./src/core/*"],
       "@app/*": ["src/app/*"],
@@ -28,7 +29,8 @@
       "@domain/*": ["./src/domain/*"],
       "@infra/*": ["./src/infra/*"],
       "@test/*": ["./test/*"],
-      "@utils/*": ["./src/utils/*"]
+      "@utils/*": ["./src/utils/*"],
+      "@database/*": ["./src/infra/database/*"]
     }
   }
 }

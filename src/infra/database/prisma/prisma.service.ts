@@ -1,6 +1,5 @@
+import { PrismaClient } from '@database/prisma/generated/client';
 import { Injectable, OnModuleInit } from '@nestjs/common';
-import { PrismaClient } from '@prisma/client';
-
 @Injectable()
 export class PrismaService extends PrismaClient implements OnModuleInit {
   async onModuleInit() {
