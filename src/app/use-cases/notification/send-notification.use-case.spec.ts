@@ -6,7 +6,7 @@ describe('Enviar Notificação', () => {
     const notificationsRepository = new InMemoryNotificationRepository();
     const sendNotification = new SendNotification(notificationsRepository);
 
-    await sendNotification.execute({
+    const { notification } = await sendNotification.execute({
       category: 'social',
       content: 'Você tem uma nova solicitação de amizade!',
       recipientId: 'example-recipient-id',
@@ -15,5 +15,6 @@ describe('Enviar Notificação', () => {
     expect(notificationsRepository.notifications).toBeTruthy();
     expect(notificationsRepository.notifications).toHaveLength(1);
     expect(notificationsRepository.notifications).toBeInstanceOf(Object);
+    expect(notificationsRepository.notifications[0]).toEqual(notification);
   });
 });
