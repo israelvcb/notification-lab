@@ -7,8 +7,8 @@ import { PrismaNotificationRepository } from './prisma/repositories/notification
   providers: [
     PrismaService,
     {
-      provide: 'NotificationRepository',
-      useExisting: PrismaNotificationRepository,
+      provide: NotificationRepository,
+      useClass: PrismaNotificationRepository,
     },
   ],
   exports: [NotificationRepository],
