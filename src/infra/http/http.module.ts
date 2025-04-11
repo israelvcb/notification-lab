@@ -6,6 +6,12 @@ import { NotificationController } from './controllers/notification/notification.
 @Module({
   imports: [DataBaseModule],
   controllers: [NotificationController],
-  providers: [SendNotification],
+  providers: [
+    SendNotification,
+    // {
+    //   provide: 'NotificationRepository',
+    //   useClass: PrismaNotificationRepository,
+    // },
+  ],
 })
 export class HttpModule {}
