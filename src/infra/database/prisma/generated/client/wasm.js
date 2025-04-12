@@ -130,6 +130,7 @@ exports.Prisma.NotificationScalarFieldEnum = {
   category: 'category',
   recipientId: 'recipientId',
   readAt: 'readAt',
+  canceledAt: 'canceledAt',
   createdAt: 'createdAt'
 };
 

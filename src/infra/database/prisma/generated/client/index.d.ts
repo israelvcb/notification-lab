@@ -1995,6 +1995,7 @@ export namespace Prisma {
     category: string | null
     recipientId: string | null
     readAt: Date | null
+    canceledAt: Date | null
     createdAt: Date | null
   }
 
@@ -2004,6 +2005,7 @@ export namespace Prisma {
     category: string | null
     recipientId: string | null
     readAt: Date | null
+    canceledAt: Date | null
     createdAt: Date | null
   }
 
@@ -2013,6 +2015,7 @@ export namespace Prisma {
     category: number
     recipientId: number
     readAt: number
+    canceledAt: number
     createdAt: number
     _all: number
   }
@@ -2024,6 +2027,7 @@ export namespace Prisma {
     category?: true
     recipientId?: true
     readAt?: true
+    canceledAt?: true
     createdAt?: true
   }
 
@@ -2033,6 +2037,7 @@ export namespace Prisma {
     category?: true
     recipientId?: true
     readAt?: true
+    canceledAt?: true
     createdAt?: true
   }
 
@@ -2042,6 +2047,7 @@ export namespace Prisma {
     category?: true
     recipientId?: true
     readAt?: true
+    canceledAt?: true
     createdAt?: true
     _all?: true
   }
@@ -2124,6 +2130,7 @@ export namespace Prisma {
     category: string | null
     recipientId: string | null
     readAt: Date | null
+    canceledAt: Date | null
     createdAt: Date
     _count: NotificationCountAggregateOutputType | null
     _min: NotificationMinAggregateOutputType | null
@@ -2150,6 +2157,7 @@ export namespace Prisma {
     category?: boolean
     recipientId?: boolean
     readAt?: boolean
+    canceledAt?: boolean
     createdAt?: boolean
   }, ExtArgs["result"]["notification"]>
 
@@ -2159,6 +2167,7 @@ export namespace Prisma {
     category?: boolean
     recipientId?: boolean
     readAt?: boolean
+    canceledAt?: boolean
     createdAt?: boolean
   }, ExtArgs["result"]["notification"]>
 
@@ -2168,6 +2177,7 @@ export namespace Prisma {
     category?: boolean
     recipientId?: boolean
     readAt?: boolean
+    canceledAt?: boolean
     createdAt?: boolean
   }, ExtArgs["result"]["notification"]>
 
@@ -2177,10 +2187,11 @@ export namespace Prisma {
     category?: boolean
     recipientId?: boolean
     readAt?: boolean
+    canceledAt?: boolean
     createdAt?: boolean
   }
 
-  export type NotificationOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "content" | "category" | "recipientId" | "readAt" | "createdAt", ExtArgs["result"]["notification"]>
+  export type NotificationOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "content" | "category" | "recipientId" | "readAt" | "canceledAt" | "createdAt", ExtArgs["result"]["notification"]>
 
   export type $NotificationPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Notification"
@@ -2191,6 +2202,7 @@ export namespace Prisma {
       category: string | null
       recipientId: string | null
       readAt: Date | null
+      canceledAt: Date | null
       createdAt: Date
     }, ExtArgs["result"]["notification"]>
     composites: {}
@@ -2620,6 +2632,7 @@ export namespace Prisma {
     readonly category: FieldRef<"Notification", 'String'>
     readonly recipientId: FieldRef<"Notification", 'String'>
     readonly readAt: FieldRef<"Notification", 'DateTime'>
+    readonly canceledAt: FieldRef<"Notification", 'DateTime'>
     readonly createdAt: FieldRef<"Notification", 'DateTime'>
   }
     
@@ -3015,6 +3028,7 @@ export namespace Prisma {
     category: 'category',
     recipientId: 'recipientId',
     readAt: 'readAt',
+    canceledAt: 'canceledAt',
     createdAt: 'createdAt'
   };
 
@@ -3137,6 +3151,7 @@ export namespace Prisma {
     category?: StringNullableFilter<"Notification"> | string | null
     recipientId?: StringNullableFilter<"Notification"> | string | null
     readAt?: DateTimeNullableFilter<"Notification"> | Date | string | null
+    canceledAt?: DateTimeNullableFilter<"Notification"> | Date | string | null
     createdAt?: DateTimeFilter<"Notification"> | Date | string
   }
 
@@ -3146,6 +3161,7 @@ export namespace Prisma {
     category?: SortOrderInput | SortOrder
     recipientId?: SortOrderInput | SortOrder
     readAt?: SortOrderInput | SortOrder
+    canceledAt?: SortOrderInput | SortOrder
     createdAt?: SortOrder
   }
 
@@ -3158,6 +3174,7 @@ export namespace Prisma {
     category?: StringNullableFilter<"Notification"> | string | null
     recipientId?: StringNullableFilter<"Notification"> | string | null
     readAt?: DateTimeNullableFilter<"Notification"> | Date | string | null
+    canceledAt?: DateTimeNullableFilter<"Notification"> | Date | string | null
     createdAt?: DateTimeFilter<"Notification"> | Date | string
   }, "id">
 
@@ -3167,6 +3184,7 @@ export namespace Prisma {
     category?: SortOrderInput | SortOrder
     recipientId?: SortOrderInput | SortOrder
     readAt?: SortOrderInput | SortOrder
+    canceledAt?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     _count?: NotificationCountOrderByAggregateInput
     _max?: NotificationMaxOrderByAggregateInput
@@ -3182,6 +3200,7 @@ export namespace Prisma {
     category?: StringNullableWithAggregatesFilter<"Notification"> | string | null
     recipientId?: StringNullableWithAggregatesFilter<"Notification"> | string | null
     readAt?: DateTimeNullableWithAggregatesFilter<"Notification"> | Date | string | null
+    canceledAt?: DateTimeNullableWithAggregatesFilter<"Notification"> | Date | string | null
     createdAt?: DateTimeWithAggregatesFilter<"Notification"> | Date | string
   }
 
@@ -3261,6 +3280,7 @@ export namespace Prisma {
     category?: string | null
     recipientId?: string | null
     readAt?: Date | string | null
+    canceledAt?: Date | string | null
     createdAt?: Date | string
   }
 
@@ -3270,6 +3290,7 @@ export namespace Prisma {
     category?: string | null
     recipientId?: string | null
     readAt?: Date | string | null
+    canceledAt?: Date | string | null
     createdAt?: Date | string
   }
 
@@ -3279,6 +3300,7 @@ export namespace Prisma {
     category?: NullableStringFieldUpdateOperationsInput | string | null
     recipientId?: NullableStringFieldUpdateOperationsInput | string | null
     readAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    canceledAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -3288,6 +3310,7 @@ export namespace Prisma {
     category?: NullableStringFieldUpdateOperationsInput | string | null
     recipientId?: NullableStringFieldUpdateOperationsInput | string | null
     readAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    canceledAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -3297,6 +3320,7 @@ export namespace Prisma {
     category?: string | null
     recipientId?: string | null
     readAt?: Date | string | null
+    canceledAt?: Date | string | null
     createdAt?: Date | string
   }
 
@@ -3306,6 +3330,7 @@ export namespace Prisma {
     category?: NullableStringFieldUpdateOperationsInput | string | null
     recipientId?: NullableStringFieldUpdateOperationsInput | string | null
     readAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    canceledAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -3315,6 +3340,7 @@ export namespace Prisma {
     category?: NullableStringFieldUpdateOperationsInput | string | null
     recipientId?: NullableStringFieldUpdateOperationsInput | string | null
     readAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    canceledAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -3457,6 +3483,7 @@ export namespace Prisma {
     category?: SortOrder
     recipientId?: SortOrder
     readAt?: SortOrder
+    canceledAt?: SortOrder
     createdAt?: SortOrder
   }
 
@@ -3466,6 +3493,7 @@ export namespace Prisma {
     category?: SortOrder
     recipientId?: SortOrder
     readAt?: SortOrder
+    canceledAt?: SortOrder
     createdAt?: SortOrder
   }
 
@@ -3475,6 +3503,7 @@ export namespace Prisma {
     category?: SortOrder
     recipientId?: SortOrder
     readAt?: SortOrder
+    canceledAt?: SortOrder
     createdAt?: SortOrder
   }
 
