@@ -1,19 +1,16 @@
-import { NotificationNotFoundError } from '@app/use-cases/errors/notification/notification-not-found.error';
 import { Notification } from 'src/app/entities/notification/notification';
 import { NotificationRepository } from 'src/app/repositories/notification.repository';
 
 export class InMemoryNotificationRepository implements NotificationRepository {
   public notifications: Notification[] = [];
 
-  async findById(
-    notificationId: string,
-  ): Promise<Notification | null | NotificationNotFoundError> {
+  async findById(notificationId: string): Promise<Notification | null> {
     const notification = this.notifications.find(
       (notification) => notification.id === notificationId,
     );
 
     if (!notification) {
-      return new NotificationNotFoundError();
+      return null;
     }
 
     return Promise.resolve(notification);

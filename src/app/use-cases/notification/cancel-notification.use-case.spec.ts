@@ -1,6 +1,7 @@
 import { Content } from '@app/entities/notification/content';
 import { Notification } from '@app/entities/notification/notification';
 import { InMemoryNotificationRepository } from '@test/repositories/in-memory-notification.repository';
+import { NotificationNotFoundError } from '../errors/notification/notification-not-found.error';
 import { CancelNotification } from './cancel-notification.use-case';
 
 describe('Cancelar Notificação', () => {
@@ -24,5 +25,16 @@ describe('Cancelar Notificação', () => {
     expect(notificationsRepository.notifications[0].canceledAt).toEqual(
       expect.any(Date),
     );
+  });
+
+  it('Não deve ser capaz de cancelar uma notificação inexistente', async () => {
+    const notificationsRepository = new InMemoryNotificationRepository();
+    const cancelNotification = new CancelNotification(notificationsRepository);
+
+    await expect(
+      cancelNotification.execute({
+        notificationId: 'fake-notification-id',
+      }),
+    ).rejects.toThrow(NotificationNotFoundError);
   });
 });
