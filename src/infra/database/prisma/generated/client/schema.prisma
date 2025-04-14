@@ -26,10 +26,12 @@ model User {
 
 model Notification {
   id          String    @id
-  content     String?
-  category    String?
-  recipientId String?
+  content     String
+  category    String
+  recipientId String
   readAt      DateTime?
   canceledAt  DateTime?
   createdAt   DateTime  @default(now())
+
+  @@index([recipientId])
 }

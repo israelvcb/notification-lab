@@ -2126,9 +2126,9 @@ export namespace Prisma {
 
   export type NotificationGroupByOutputType = {
     id: string
-    content: string | null
-    category: string | null
-    recipientId: string | null
+    content: string
+    category: string
+    recipientId: string
     readAt: Date | null
     canceledAt: Date | null
     createdAt: Date
@@ -2198,9 +2198,9 @@ export namespace Prisma {
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
       id: string
-      content: string | null
-      category: string | null
-      recipientId: string | null
+      content: string
+      category: string
+      recipientId: string
       readAt: Date | null
       canceledAt: Date | null
       createdAt: Date
@@ -3147,9 +3147,9 @@ export namespace Prisma {
     OR?: NotificationWhereInput[]
     NOT?: NotificationWhereInput | NotificationWhereInput[]
     id?: StringFilter<"Notification"> | string
-    content?: StringNullableFilter<"Notification"> | string | null
-    category?: StringNullableFilter<"Notification"> | string | null
-    recipientId?: StringNullableFilter<"Notification"> | string | null
+    content?: StringFilter<"Notification"> | string
+    category?: StringFilter<"Notification"> | string
+    recipientId?: StringFilter<"Notification"> | string
     readAt?: DateTimeNullableFilter<"Notification"> | Date | string | null
     canceledAt?: DateTimeNullableFilter<"Notification"> | Date | string | null
     createdAt?: DateTimeFilter<"Notification"> | Date | string
@@ -3157,9 +3157,9 @@ export namespace Prisma {
 
   export type NotificationOrderByWithRelationInput = {
     id?: SortOrder
-    content?: SortOrderInput | SortOrder
-    category?: SortOrderInput | SortOrder
-    recipientId?: SortOrderInput | SortOrder
+    content?: SortOrder
+    category?: SortOrder
+    recipientId?: SortOrder
     readAt?: SortOrderInput | SortOrder
     canceledAt?: SortOrderInput | SortOrder
     createdAt?: SortOrder
@@ -3170,9 +3170,9 @@ export namespace Prisma {
     AND?: NotificationWhereInput | NotificationWhereInput[]
     OR?: NotificationWhereInput[]
     NOT?: NotificationWhereInput | NotificationWhereInput[]
-    content?: StringNullableFilter<"Notification"> | string | null
-    category?: StringNullableFilter<"Notification"> | string | null
-    recipientId?: StringNullableFilter<"Notification"> | string | null
+    content?: StringFilter<"Notification"> | string
+    category?: StringFilter<"Notification"> | string
+    recipientId?: StringFilter<"Notification"> | string
     readAt?: DateTimeNullableFilter<"Notification"> | Date | string | null
     canceledAt?: DateTimeNullableFilter<"Notification"> | Date | string | null
     createdAt?: DateTimeFilter<"Notification"> | Date | string
@@ -3180,9 +3180,9 @@ export namespace Prisma {
 
   export type NotificationOrderByWithAggregationInput = {
     id?: SortOrder
-    content?: SortOrderInput | SortOrder
-    category?: SortOrderInput | SortOrder
-    recipientId?: SortOrderInput | SortOrder
+    content?: SortOrder
+    category?: SortOrder
+    recipientId?: SortOrder
     readAt?: SortOrderInput | SortOrder
     canceledAt?: SortOrderInput | SortOrder
     createdAt?: SortOrder
@@ -3196,9 +3196,9 @@ export namespace Prisma {
     OR?: NotificationScalarWhereWithAggregatesInput[]
     NOT?: NotificationScalarWhereWithAggregatesInput | NotificationScalarWhereWithAggregatesInput[]
     id?: StringWithAggregatesFilter<"Notification"> | string
-    content?: StringNullableWithAggregatesFilter<"Notification"> | string | null
-    category?: StringNullableWithAggregatesFilter<"Notification"> | string | null
-    recipientId?: StringNullableWithAggregatesFilter<"Notification"> | string | null
+    content?: StringWithAggregatesFilter<"Notification"> | string
+    category?: StringWithAggregatesFilter<"Notification"> | string
+    recipientId?: StringWithAggregatesFilter<"Notification"> | string
     readAt?: DateTimeNullableWithAggregatesFilter<"Notification"> | Date | string | null
     canceledAt?: DateTimeNullableWithAggregatesFilter<"Notification"> | Date | string | null
     createdAt?: DateTimeWithAggregatesFilter<"Notification"> | Date | string
@@ -3276,9 +3276,9 @@ export namespace Prisma {
 
   export type NotificationCreateInput = {
     id: string
-    content?: string | null
-    category?: string | null
-    recipientId?: string | null
+    content: string
+    category: string
+    recipientId: string
     readAt?: Date | string | null
     canceledAt?: Date | string | null
     createdAt?: Date | string
@@ -3286,9 +3286,9 @@ export namespace Prisma {
 
   export type NotificationUncheckedCreateInput = {
     id: string
-    content?: string | null
-    category?: string | null
-    recipientId?: string | null
+    content: string
+    category: string
+    recipientId: string
     readAt?: Date | string | null
     canceledAt?: Date | string | null
     createdAt?: Date | string
@@ -3296,9 +3296,9 @@ export namespace Prisma {
 
   export type NotificationUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
-    content?: NullableStringFieldUpdateOperationsInput | string | null
-    category?: NullableStringFieldUpdateOperationsInput | string | null
-    recipientId?: NullableStringFieldUpdateOperationsInput | string | null
+    content?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    recipientId?: StringFieldUpdateOperationsInput | string
     readAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     canceledAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -3306,9 +3306,9 @@ export namespace Prisma {
 
   export type NotificationUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
-    content?: NullableStringFieldUpdateOperationsInput | string | null
-    category?: NullableStringFieldUpdateOperationsInput | string | null
-    recipientId?: NullableStringFieldUpdateOperationsInput | string | null
+    content?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    recipientId?: StringFieldUpdateOperationsInput | string
     readAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     canceledAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -3316,9 +3316,9 @@ export namespace Prisma {
 
   export type NotificationCreateManyInput = {
     id: string
-    content?: string | null
-    category?: string | null
-    recipientId?: string | null
+    content: string
+    category: string
+    recipientId: string
     readAt?: Date | string | null
     canceledAt?: Date | string | null
     createdAt?: Date | string
@@ -3326,9 +3326,9 @@ export namespace Prisma {
 
   export type NotificationUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
-    content?: NullableStringFieldUpdateOperationsInput | string | null
-    category?: NullableStringFieldUpdateOperationsInput | string | null
-    recipientId?: NullableStringFieldUpdateOperationsInput | string | null
+    content?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    recipientId?: StringFieldUpdateOperationsInput | string
     readAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     canceledAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -3336,9 +3336,9 @@ export namespace Prisma {
 
   export type NotificationUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
-    content?: NullableStringFieldUpdateOperationsInput | string | null
-    category?: NullableStringFieldUpdateOperationsInput | string | null
-    recipientId?: NullableStringFieldUpdateOperationsInput | string | null
+    content?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    recipientId?: StringFieldUpdateOperationsInput | string
     readAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     canceledAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
