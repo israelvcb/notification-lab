@@ -1,16 +1,9 @@
-export class PrismaNotificationMapper {
-  static toDomain(raw: any) {
-    return {
-      id: raw.id,
-      content: raw.content,
-      category: raw.category,
-      recipientId: raw.recipientId,
-      readAt: raw.readAt,
-      createdAt: raw.createdAt,
-    };
-  }
+import { Content } from '@app/entities/notification/content';
+import { Notification } from '@app/entities/notification/notification';
+import { Notification as RawNotification } from '../generated/client';
 
-  static toPrisma(notification: any) {
+export class PrismaNotificationMapper {
+  static toPrisma(notification: Notification) {
     return {
       id: notification.id,
       content: notification.content.value,
@@ -19,5 +12,15 @@ export class PrismaNotificationMapper {
       readAt: notification.readAt,
       createdAt: notification.createdAt,
     };
+  }
+
+  static toDomain(raw: RawNotification): Notification {
+    return new Notification({
+      category: raw.category,
+      content: new Content(raw.content),
+      recipientId: raw.recipientId,
+      readAt: raw.readAt,
+      createdAt: raw.createdAt,
+    });
   }
 }
